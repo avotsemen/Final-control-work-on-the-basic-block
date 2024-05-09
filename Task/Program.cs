@@ -15,6 +15,9 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Устанавливаем кодировку ввода на UTF-16 чтобы работало с кирилицей
+        Console.InputEncoding = System.Text.Encoding.GetEncoding("utf-16");
+        
         System.Console.WriteLine("Введите строку из слов, разделенных пробелами:");
         string input = Console.ReadLine(); // Получаем ввод от пользователя
         string[] originalArray = input.Split(' '); // Разбиваем введенную строку на элементы массива по пробелам и сохраняем в массив
